@@ -1,0 +1,79 @@
+﻿@{
+    ViewData["Title"] = "Sorteio";
+}
+
+@*<img src="/logo/logo_central.png" alt="" width="400" height="200" />*@
+<h1 class="display-4">Sorteio de times</h1>
+
+<form class="row g-3 align-items-center" style="margin-top: 10px">
+    <div class="col-sm-3"></div>
+    <div class="col-sm-3">
+        <label for="nome">Nome :</label>
+        <input type="text" class="form-control" id="nick" placeholder="Digite seu nome" required>
+    </div>
+
+    <div class="col-sm-3">
+        <label for="opcao">Classificar :</label>
+        <select class="form-select" id="opcaoClassificacao" name="opcaoClassificacao">
+            <option selected disabled>Selecione uma opção</option>
+            <option value="Rank">Rank</option>
+            <option value="Rota">Rota</option>
+        </select>
+    </div>
+    <div class="col-sm-3"></div>
+
+    <div class="form-group d-none" id="Rank-campos">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <label for="Rank-campoSelectRota">Rank :</label>
+                <select class="form-select" id="opcaoRank" name="opcaoRank">
+                    <option selected disabled>Selecione uma opção</option>
+                    <option value="Unranked">Sem rank</option>
+                    <option value="Ferro">Ferro</option>
+                    <option value="Bronze">Bronze</option>
+                    <option value="Prata">Prata</option>
+                    <option value="Ouro">Ouro</option>
+                    <option value="Platina">Platina</option>
+                    <option value="Diamante">Diamante</option>
+                    <option value="Mestre">Mestre</option>
+                    <option value="GraoMestre">Grão-Mestre</option>
+                    <option value="Desafiante">Desafiante</option>
+                </select>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="Rank-campoClassificacao">Classificação Geral :</label>
+                <input type="number" class="form-control" id="classificacaoRank" name="clasRank" min="0" max="10" step="0.1">
+            </div>
+        </div>
+    </div>
+
+    <div class="form-group d-none" id="Rota-campos">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-3">
+                <label for="Rota-campoSelectRota">Rota :</label>
+                <select class="form-select" id="opcaoRota" name="opcaoRota">
+                    <option selected disabled>Selecione uma opção</option>
+                    <option value="Topo">Topo</option>
+                    <option value="Selva">Selva</option>
+                    <option value="Meio">Meio</option>
+                    <option value="Atirador">Atirador</option>
+                    <option value="Suporte">Suporte</option>
+                </select>
+            </div>
+
+            <div class="col-sm-3">
+                <label for="Rota-campoClassificacao">Classificação por Rota :</label>
+                <input type="number" class="form-control" id="classificacaoRota" name="clasRota" min="0" max="10" step="0.1">
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="d-flex justify-content-center" style="margin-top: 15px">
+            <button id="btnAdicionar" onclick="addList()" type="button" class="btn btn-primary">Adicionar</button>
+        </div>
+    </div>
+</form>

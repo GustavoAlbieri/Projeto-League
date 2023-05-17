@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+nav {
+    color: white;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: #28344E;
+    color: white;
+}
+
+h1 {
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+}

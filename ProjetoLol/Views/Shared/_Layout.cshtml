@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - League of Legends</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/ProjetoLol.styles.css" asp-append-version="true" />
+    <link rel="shortcut icon" href="/logo/icons.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="https://www.leagueoflegends.com/pt-br/" target="_blank">
+                    <img src="/logo/LoL_icon.svg" alt="Você será redirecionado para o site." width="30" height="24"/>
+                    League of Legends
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <section class="col-sm-6">
+                <table class="table d-none" style="color: white" id="tablePlayers">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Classificar por</th>
+                            <th>Rank / Rota</th>
+                            <th>Classificação</th>
+                            <th>Players</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+
+    <footer class="border-top footer text-center">
+        <div class="container">
+            &copy; 2023 - Alloy balancing -
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
